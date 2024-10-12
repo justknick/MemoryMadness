@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Weapon" load_steps=3 format=3 uid="uid://cs8olkfrbws4w"]
+
+[ext_resource type="Script" path="res://classes/weapon.gd" id="1_d1f35"]
+[ext_resource type="Texture2D" uid="uid://cxw4v5vvrfhf6" path="res://assets/glitch/caneRedTop.png" id="2_iymyg"]
+
+[resource]
+script = ExtResource("1_d1f35")
+texture = ExtResource("2_iymyg")
+weapon_name = "Knife"
+description = ""
+base_damage = 3

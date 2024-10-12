@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxyw05g2wa764"]
+
+[ext_resource type="Script" path="res://test/resource_test.gd" id="1_wep84"]
+[ext_resource type="Resource" uid="uid://df1368o4uakpx" path="res://resource/axe.tres" id="2_hxuvl"]
+
+[node name="ResourceTest" type="Node2D"]
+script = ExtResource("1_wep84")
+weapon = ExtResource("2_hxuvl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]

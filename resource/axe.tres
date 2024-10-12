@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Weapon" load_steps=3 format=3 uid="uid://df1368o4uakpx"]
+
+[ext_resource type="Script" path="res://classes/weapon.gd" id="1_1bs1o"]
+[ext_resource type="Texture2D" uid="uid://bfw0w0lb46dh" path="res://assets/glitch/ambulance_SE.png" id="2_8wwcm"]
+
+[resource]
+script = ExtResource("1_1bs1o")
+texture = ExtResource("2_8wwcm")
+weapon_name = "Axe"
+description = ""
+base_damage = 10

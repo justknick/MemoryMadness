@@ -1,0 +1,68 @@
+[gd_scene load_steps=2 format=3 uid="uid://cs0elnycnr8fx"]
+
+[ext_resource type="LabelSettings" uid="uid://dh3ytj3b7t4se" path="res://resource/LG_84_Green.tres" id="1_qvur6"]
+
+[node name="MainScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.164706, 0.141176, 0.54902, 0.203922)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="HBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Spacer" type="Control" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TitleLabel" type="Label" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "Memory Madness"
+label_settings = ExtResource("1_qvur6")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Spacer2" type="Control" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Levels" type="HBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 24
+
+[node name="Spacer3" type="Control" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Sprites" type="HBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 24
+
+[node name="Spacer4" type="Control" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
