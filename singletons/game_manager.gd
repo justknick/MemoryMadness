@@ -1,8 +1,9 @@
 extends Node
 
 var _levels: Dictionary = {
+	0: LevelData.new(0, 0, 0), 
 	1: LevelData.new(1, 2, 2), 
-	2: LevelData.new(2, 3, 4),
+	2: LevelData.new(2, 2, 4),
 	3: LevelData.new(3, 3, 4), 
 	4: LevelData.new(4, 4, 6), 
 	5: LevelData.new(5, 6, 6), 
@@ -16,9 +17,9 @@ func _ready() -> void:
 
 
 func get_level(level: int) -> LevelData:
-	if _levels[level] == null:
+	if not _levels.has(level):
 		print("no level found")
-		pass
+		return _levels[0]
 	return _levels[level]
 
 

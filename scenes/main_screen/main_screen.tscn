@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://cs0elnycnr8fx"]
+[gd_scene load_steps=4 format=3 uid="uid://cs0elnycnr8fx"]
 
 [ext_resource type="LabelSettings" uid="uid://dh3ytj3b7t4se" path="res://resource/LG_84_Green.tres" id="1_qvur6"]
+[ext_resource type="PackedScene" uid="uid://qfrmahg0yptj" path="res://scenes/ui/front_sprite/front_sprite.tscn" id="2_qyjgw"]
+[ext_resource type="PackedScene" uid="uid://cadnxdi8bkyg6" path="res://scenes/ui/buttons/level_button.tscn" id="2_sp6ku"]
 
 [node name="MainScreen" type="Control"]
 layout_mode = 3
@@ -54,6 +56,30 @@ layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/separation = 24
 
+[node name="LevelButton1" parent="MarginContainer/HBoxContainer/Levels" instance=ExtResource("2_sp6ku")]
+layout_mode = 2
+level_number = 1
+
+[node name="LevelButton2" parent="MarginContainer/HBoxContainer/Levels" instance=ExtResource("2_sp6ku")]
+layout_mode = 2
+level_number = 2
+
+[node name="LevelButton3" parent="MarginContainer/HBoxContainer/Levels" instance=ExtResource("2_sp6ku")]
+layout_mode = 2
+level_number = 3
+
+[node name="LevelButton4" parent="MarginContainer/HBoxContainer/Levels" instance=ExtResource("2_sp6ku")]
+layout_mode = 2
+level_number = 4
+
+[node name="LevelButton5" parent="MarginContainer/HBoxContainer/Levels" instance=ExtResource("2_sp6ku")]
+layout_mode = 2
+level_number = 5
+
+[node name="LevelButton6" parent="MarginContainer/HBoxContainer/Levels" instance=ExtResource("2_sp6ku")]
+layout_mode = 2
+level_number = 6
+
 [node name="Spacer3" type="Control" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
@@ -61,7 +87,19 @@ size_flags_vertical = 3
 [node name="Sprites" type="HBoxContainer" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_constants/separation = 24
+theme_override_constants/separation = 80
+
+[node name="FrontSprite" parent="MarginContainer/HBoxContainer/Sprites" instance=ExtResource("2_qyjgw")]
+layout_mode = 2
+
+[node name="FrontSprite2" parent="MarginContainer/HBoxContainer/Sprites" instance=ExtResource("2_qyjgw")]
+layout_mode = 2
+
+[node name="FrontSprite3" parent="MarginContainer/HBoxContainer/Sprites" instance=ExtResource("2_qyjgw")]
+layout_mode = 2
+
+[node name="FrontSprite4" parent="MarginContainer/HBoxContainer/Sprites" instance=ExtResource("2_qyjgw")]
+layout_mode = 2
 
 [node name="Spacer4" type="Control" parent="MarginContainer/HBoxContainer"]
 layout_mode = 2

@@ -1,0 +1,88 @@
+[gd_scene load_steps=5 format=3 uid="uid://dbe6t72u3h60q"]
+
+[ext_resource type="LabelSettings" uid="uid://dfi4leopae0oi" path="res://resource/GM_32_Dark.tres" id="1_sywjj"]
+[ext_resource type="Script" path="res://scenes/game_screen/game_screen.gd" id="1_x25x6"]
+[ext_resource type="PackedScene" uid="uid://dy3nyg6ec6a78" path="res://scenes/ui/buttons/exit_button.tscn" id="2_2nfrl"]
+[ext_resource type="PackedScene" uid="uid://x8cta2ypynum" path="res://scenes/ui/buttons/memory_tile_button.tscn" id="2_xlx3h"]
+
+[node name="GameScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_x25x6")
+memory_tile = ExtResource("2_xlx3h")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TileContainer" type="MarginContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TilesContainer" type="GridContainer" parent="HBoxContainer/TileContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="PlayerContainer" type="MarginContainer" parent="HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/PlayerContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="MovesHud" type="HBoxContainer" parent="HBoxContainer/PlayerContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="MovesLabel" type="Label" parent="HBoxContainer/PlayerContainer/VBoxContainer/MovesHud"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Moves: "
+label_settings = ExtResource("1_sywjj")
+vertical_alignment = 1
+
+[node name="MovesValue" type="Label" parent="HBoxContainer/PlayerContainer/VBoxContainer/MovesHud"]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "0"
+label_settings = ExtResource("1_sywjj")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="PairsHud" type="HBoxContainer" parent="HBoxContainer/PlayerContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="PairsLabel" type="Label" parent="HBoxContainer/PlayerContainer/VBoxContainer/PairsHud"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Pairs: "
+label_settings = ExtResource("1_sywjj")
+vertical_alignment = 1
+
+[node name="PairsValue" type="Label" parent="HBoxContainer/PlayerContainer/VBoxContainer/PairsHud"]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "00/00"
+label_settings = ExtResource("1_sywjj")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Spacer" type="Control" parent="HBoxContainer/PlayerContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+
+[node name="ExitButton" parent="HBoxContainer/PlayerContainer/VBoxContainer" instance=ExtResource("2_2nfrl")]
+layout_mode = 2
