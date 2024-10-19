@@ -39,8 +39,11 @@ func hide_tiles() -> void:
 		t.hide_on_success()
 	_pairs_made += 1
 	prints("pairs made: ", _pairs_made)
+	# once the last pair is made, show gameover
+	check_gameover()
 	# play sound when hiding? 
 	pass 
+	
 
 
 func selections_pair_match() -> bool: 
@@ -78,6 +81,15 @@ func on_tile_selected(tile: MemoryTile) -> void:
 	check_pair_made()
 	# play click sound 
 	pass 
+
+
+func check_gameover() -> void:
+	#when the target pair is achieved, display gameover
+	#print("pairs: ", _pairs_made, ", target: ", _target_pairs)
+	if _pairs_made == _target_pairs:
+		SignalManager.on_gameover.emit(_moves_made)
+	else:
+		pass
 
 
 func on_game_exit_pressed() -> void: 
