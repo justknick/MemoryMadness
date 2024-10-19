@@ -1,6 +1,7 @@
 extends TextureButton
 class_name MemoryTile
 
+@onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
 @onready var tile_frame: TextureRect = $TileFrame
 @onready var tile_image: TextureRect = $TileImage
 @onready var memory_tile_button: MemoryTile = $"."
@@ -66,5 +67,5 @@ func on_selection_disabled() -> void:
 
 func _on_pressed() -> void:
 	if _can_select_me == true && tile_frame.visible == false:
-		#reveal(true)
 		SignalManager.on_tile_selected.emit(self)
+		SoundManager.play_tile_select(audio_stream_player)

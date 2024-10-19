@@ -21,6 +21,8 @@ texture_normal = ExtResource("1_q1kh6")
 texture_pressed = ExtResource("2_7tqpv")
 script = ExtResource("2_s4w7t")
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
 [node name="ExitLabel" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 15

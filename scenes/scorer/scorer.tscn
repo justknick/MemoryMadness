@@ -5,6 +5,8 @@
 [node name="Scorer" type="Node"]
 script = ExtResource("1_wpja7")
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
 [node name="RevealTimer" type="Timer" parent="."]
 one_shot = true
 

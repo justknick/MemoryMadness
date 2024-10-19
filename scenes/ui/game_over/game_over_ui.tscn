@@ -16,6 +16,12 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_bbdi0")
 
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+volume_db = -5.0
+
 [node name="BGTextureRect" type="ColorRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
@@ -90,9 +96,9 @@ layout_mode = 2
 size_flags_vertical = 3
 
 [node name="ExitButton" parent="NinePatchRect/MarginContainer/VBoxContainer" instance=ExtResource("4_u24on")]
-unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="NinePatchRect/MarginContainer/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]

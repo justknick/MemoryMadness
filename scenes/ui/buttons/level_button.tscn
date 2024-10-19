@@ -23,6 +23,8 @@ texture_pressed = ExtResource("2_tu0y5")
 texture_hover = ExtResource("3_ebltg")
 script = ExtResource("4_mfn05")
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
 [node name="LevelLabel" type="Label" parent="."]
 unique_name_in_owner = true
 layout_mode = 1

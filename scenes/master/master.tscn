@@ -8,6 +8,8 @@
 [node name="Master" type="CanvasLayer"]
 script = ExtResource("1_v4bp6")
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
 [node name="TextureRect" type="TextureRect" parent="."]
 anchors_preset = 15
 anchor_right = 1.0

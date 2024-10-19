@@ -21,6 +21,8 @@ pivot_offset = Vector2(42, 42)
 texture_normal = ExtResource("1_3ehh2")
 script = ExtResource("2_2qy1b")
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
 [node name="TileFrame" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 8

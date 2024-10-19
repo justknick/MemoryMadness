@@ -2,6 +2,7 @@ extends Node
 
 class_name Scorer
 
+@onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
 @onready var reveal_timer: Timer = $RevealTimer
 
 var _selections: Array[MemoryTile] = []
@@ -38,12 +39,11 @@ func hide_tiles() -> void:
 	for t in _selections:
 		t.hide_on_success()
 	_pairs_made += 1
-	prints("pairs made: ", _pairs_made)
+	#prints("pairs made: ", _pairs_made)
 	# once the last pair is made, show gameover
 	check_gameover()
-	# play sound when hiding? 
-	pass 
-	
+	# play sound when hiding
+	SoundManager.play_tile_success(audio_stream_player)
 
 
 func selections_pair_match() -> bool: 
@@ -79,8 +79,6 @@ func on_tile_selected(tile: MemoryTile) -> void:
 	tile.reveal(true)
 	# check if selections is length 2
 	check_pair_made()
-	# play click sound 
-	pass 
 
 
 func check_gameover() -> void:
